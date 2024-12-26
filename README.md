@@ -38,6 +38,10 @@ new line
 [/md]
 ```
 
+![image](https://github.com/volkbarks/mybb-markdown-parser/blob/main/example%20basic.png)
+
+-----
+
 ### Ipsum example
 Thanks to [Lorem Markdownum](https://jaspervdj.be/lorem-markdownum/) for generating this!
 
@@ -77,3 +81,5 @@ Celasse **pennas** vitamque propioris puer, illic spectare brevis Capetusque vul
 
 Super saturos moveri sed omni dique Orithyia quoque? Tuos meae infelix. Foedat cognoscenda genu sparsos luctisono recepto erat horrifer illa fratris [est si locus](http://www.aurum.com/et.aspx) incrementa. Latus naufragus sumptis favent Aeoliique *in* breve mersis ergo moveri *fibris* et odoribus fugere, utilibus et prior patrem.[/md]
 ```
+
+![image](https://github.com/volkbarks/mybb-markdown-parser/blob/main/example%20ipsum.png)
