@@ -5,6 +5,7 @@ A MyBB 1.8 plugin that allows users to use markdown within `[md][/md]` tags. Thi
 1. Copy the inc folder into MyBB.
 2. Activate the plugin.
 3. Any posts with `[md]` tags should now be rendering markdown into formatted HTML.
+4. _(Optional)_ Paste the classes in `styles.css` in your theme's css to get the blockquote style in the examples shown below.
 
 ## Examples
 Here are some example inputs.
