@@ -94,16 +94,31 @@ function markdown_parser_parse($message)
 }
 
 // Removes all the extra "<br />" tags MyBB's class_parser:parse_message method does.
-function markdown_parser_endparse($message)
+function markdown_parser_endparse($message) 
 {
     // Look for the [md] BBCode and process it
     $pattern = "#\[md\](.*?)\[/md\]#si";
     $message = preg_replace_callback(
         $pattern,
-        function ($matches) {
+        function ($matches) {		
             $content = $matches[1];
 
+            // Temporarily escape content inside <blockquote> tags
+            $content = preg_replace_callback(
+                "#<(blockquote)[^>]*>(.*?)</\\1>#si",
+                function($tagMatches) {
+                    // Escape <br /> tags inside the <code> and <blockquote> tags
+                    return str_replace("<br />", "__BR__TAG__", $tagMatches[0]);
+                },
+                $content
+            );
+
+            // Now replace all <br /> tags in the content
             $content = str_replace("<br />", "", $content);
+            
+            // Restore the <blockquote> tags and their content
+            $content = str_replace("__BR__TAG__", "<br />", $content);
+
             return $content;
         },
         $message
