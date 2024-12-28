@@ -107,7 +107,6 @@ function markdown_parser_endparse($message)
             $content = preg_replace_callback(
                 "#<(blockquote)[^>]*>(.*?)</\\1>#si",
                 function($tagMatches) {
-                    // Escape <br /> tags inside the <code> and <blockquote> tags
                     return str_replace("<br />", "__BR__TAG__", $tagMatches[0]);
                 },
                 $content
